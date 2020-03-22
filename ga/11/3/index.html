@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-161524216-1"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-161524216-1');
+    </script>
+    <script>
+    $(document).ready(function() {
+        $('#btnGoTo').on('click', function() {
+            window.location.href = "/ga/11/3/registersuccess.html"
+        })
+    })
+    </script>
+    <title>11/3</title>
+</head>
+<body>
+    도착 목표 만들기
+    registersuccess.html에 도착하면 도착 목표가 달성됩니다.
+    "가입 완료" 버튼을 클릭해주세요.
+
+    <input type="button" id='btnGoTo' value='가입 완료'>
+
+</body>
+</html>
