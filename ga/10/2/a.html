@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-161524216-1"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-161524216-1');
+    </script>
+    <script>
+    $(document).ready(function() {
+        alert('페이지 진입 이벤트가 발생했습니다.')
+        gtag('event', '진입', {
+            'event_category': 'A 회원가입하기',
+            'event_label': 'A 회원가입하기_진입_회원가입하기_진입'
+        })
+        
+        $('#btnJoin').on('click', function() {
+            alert('회원가입 버튼 클릭 이벤트가 발생했습니다');
+            gtag('event', '클릭', {
+                'event_category': 'A 회원가입하기',
+                'event_label': 'A 회원가입하기_클릭_회원가입하기 클릭',
+                'value': 1000
+            })
+        })
+    })
+    </script>
+    <title>10/2 - a</title>
+</head>
+<body>
+    <h2>A안 회원가입하기</h2>
+
+    <P>회원가입 버튼 클릭률(%) = 회원가입 버튼 클릭 이벤트 수 / 회원가입 페이지 진입 이벤트 수 * 100</P>
+
+    <input type="button" id='btnJoin' value='회원가입하기'>
+
+</body>
+</html>
