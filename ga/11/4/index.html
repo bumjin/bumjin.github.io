@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-161524216-1"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-161524216-1');
+    </script>
+    <script>
+    $(document).ready(function() {
+        var $btnGoTo = $('#btnGoTo');
+        var waitFor = 35;
+        var now = 0;
+        var btnGoToInterval = setInterval(function(){
+            now = now + 1;
+            $btnGoTo.text(waitFor - now + '초 남았습니다.');
+            if(now == 35){
+                clearInterval(btnGoToInterval);
+                $btnGoTo.text('다음 페이지로 이동').on('click', function(){
+                    window.location.href = "/ga/11/4/next.html"
+                });
+            }
+        }, 1000);
+    })
+    </script>
+    <title>11/4</title>
+</head>
+<body>
+    <div id="content">
+		<h2>시간 목표 만들기</h2>
+		<p>
+			약 30초 뒤 다음 페이지에 접속하면 시간 목표가 달성됩니다.<br/>
+			아래 버튼이 "다음 페이지로 이동"으로 변경되면 클릭해주세요.
+		</p>
+		<div>
+			<button id="btnGoTo" class="btn btn-primary btn-outline">다음 페이지로 이동</button>
+		</div>
+	</div>
+
+    <input type="button" id='btnGoTo' value='가입 완료'>
+
+</body>
+</html>
