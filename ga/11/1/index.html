@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-161524216-1"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-161524216-1');
+    </script>
+    <script>
+    $(document).ready(function() {
+        $('#btnJoin').on('click', function() {
+            alert('회원가입 버튼 클릭 이벤트가 발생했습니다');
+            gtag('event', '회원가입 버튼 클릭', {
+                'event_category': '회원가입',
+                'event_label': '회원가입_회원가입 버튼 클릭'
+            })
+        })
+    })
+    </script>
+    <title>11/1</title>
+</head>
+<body>
+    목표로 회원가입 클릭 이벤트를 만들고
+    조건은 라벨 회원가입_회원가입 버튼 클릭으로
+    확인은 실시간 > 전환수
+
+    <input type="button" id='btnJoin' value='회원가입'>
+
+</body>
+</html>
