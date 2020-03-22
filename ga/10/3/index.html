@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-161524216-1"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-161524216-1');
+    </script>
+    <script>
+    $(document).ready(function() {
+        if(window.console) console.log('페이지 진입 이벤트가 발생했습니다.')
+        gtag('event', '진입', {
+            'event_category': '가입 개선',
+            'event_label': '가입 개선_진입'
+        })
+        
+        $('.form-control, #btnJoin').on('click', function(){
+            var label = $(this).data('label');
+            if(window.console) console.log('label:'+label+' clicked.');
+            gtag('event', label, {
+                'event_category': '가입 개선',
+                'event_label': '가입 개선_' + label + ' 클릭'
+            })
+        });
+    })
+    </script>
+    <title>10/3</title>
+</head>
+<body>
+    <div id="content">
+        <h2>실전! 간단 사용성 테스트, 회원가입 양식에서 어려운 부분 찾기</h2>
+        <p>
+            각 입력 양식을 클릭하면 이벤트가 발생합니다. 입력하기 부담 없는 지점까지 입력을 진행해보세요.<br/>
+            입력과 가입을 마친 뒤에는 "이벤트 보고서 바로가기" 버튼을 눌러 데이터를 확인해보세요. 실습 계정에서만 데이터 확인이 가능하다는 점 주의하세요.
+        </p>
+        <div class="row form-group">
+            <div class="col-md-12">
+                <label for="iId">아이디 입력</label>
+                <input type="text" id="iId" class="form-control" placeholder="아이디 입력" data-label="아이디 입력">
+            </div>
+            <div class="col-md-12">
+                <label for="iPassword">비밀번호 입력</label>
+                <input type="password" id="iPassword" class="form-control" placeholder="비밀번호 입력" data-label="비밀번호 입력">
+            </div>
+            <div class="col-md-12">
+                <label for="iPasswordCheck">비밀번호 확인</label>
+                <input type="password" id="iPasswordCheck" class="form-control" placeholder="비밀번호 확인" data-label="비밀번호 확인">
+            </div>
+            <div class="col-md-12">
+                <label for="iPostalCode">우편번호 찾기</label><br/>
+                <button id="btnPostal" class="btn btn-primary btn-practice btn-outline btn-lg form-control" data-label="우편번호 찾기">우편번호 찾기</button>
+            </div>
+            <div class="col-md-12">
+                <label for="iAddress">상세주소 입력</label>
+                <input type="text" id="iAddress" class="form-control" placeholder="상세주소 입력" data-label="상세주소 입력">
+            </div>
+            <div class="col-md-12" style="margin-top: 24px;">
+                <button id="btnJoin" class="btn btn-primary btn-block" data-label="가입 완료">가입 완료</button>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
