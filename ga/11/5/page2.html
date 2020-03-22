@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-161524216-1"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-161524216-1');
+    </script>
+    <script>
+        $( document ).ready(function() {
+            $('#btnGoTo').on('click', function() {
+                window.location.href = "/ga/11/5/page3.html"
+            });
+        });
+    </script>
+    <title>11/5</title>
+</head>
+<body>
+    <div id="content"><h2>두 번째 페이지</h2> <p>
+        세 페이지를 조회하면 세션당 페이지수/조회 화면수 목표가 달성됩니다.<br>
+        "세 번째 페이지로 이동" 버튼을 클릭해주세요.
+    </p> <div><button id="btnGoTo">세 번째 페이지로 이동</button></div></div>
+
+</body>
+</html>
