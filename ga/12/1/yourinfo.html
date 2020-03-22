@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-161524216-1"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-161524216-1');
+    </script>
+    <script>
+        $( document ).ready(function() {
+            $('#btnGoTo').on('click', function() {
+                window.location.href = "/ga/12/1/payment.html"
+            });
+        });
+        
+    </script>
+    <title>11/5</title>
+</head>
+<body>
+    <div id="content"><h2>Your Info</h2> <p>
+        basket.html > yourinfo.html > payment.html > revieworder.html > ordercompleted.html 순으로 페이지에 접속하면 유입경로 목표가 달성됩니다.<br>
+"payment.html로 이동" 버튼을 클릭해주세요.
+    </p> <div><button id="btnGoTo">payment.html 페이지로 이동</button></div></div>
+
+</body>
+</html>
