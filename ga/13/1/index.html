@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-161524216-1"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-161524216-1');
+    </script>
+    <script>
+        $( document ).ready(function() {
+            $('#login-dialog').hide();
+			$('#btnLogin').on('click', function(){
+                $('#login-dialog').show();
+                gtag('config', 'UA-161524216-1', {
+                    'page_title': '로그인 - 가상 페이지뷰',
+                    'page_path': '/virtual/login/'
+                });
+            });
+            $('.remodal-cancel').on('click', function(){
+                $('#login-dialog').hide();
+            });
+            $('.remodal-confirm').on('click', function(){
+                $('#login-dialog').hide();
+                
+			});
+        });
+    </script>
+    <title>13/1</title>
+</head>
+<body>
+    <div id="content"><h2>가상 페이지뷰 살펴보기</h2> <p>
+        1. "로그인" 버튼을 클릭하면 로그인 다이얼로그가 표시됩니다.<br>
+        2. 로그인 다이얼로그가 표시될 때 가상 페이지뷰가 발생됩니다.
+    </p> <div><button id="btnLogin" data-remodal-target="modal" class="btn btn-primary btn-outline btn-lg">로그인</button></div></div>
+
+    <div id='login-dialog' style='display:none;' class="remodal remodal-is-initialized remodal-is-opened" data-remodal-id="modal" data-remodal-options="hashTracking: false, closeOnOutsideClick: false" tabindex="-1">
+		<button data-remodal-action="close" class="remodal-close"></button>
+		<h1>로그인</h1>
+		<div class="row form-group">
+			<div class="col-md-12">
+				<input type="text" id="iId" class="form-control" placeholder="아이디 입력">
+				<input type="password" id="iPassword" class="form-control" placeholder="비밀번호 입력" style="margin-top: 8px;">
+			</div>
+		</div>
+		<br>
+		<button data-remodal-action="cancel" class="remodal-cancel">취소</button>
+		<button data-remodal-action="confirm" class="remodal-confirm">확인</button>
+	</div>
+</body>
+</html>
